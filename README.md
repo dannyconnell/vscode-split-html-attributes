@@ -1,65 +1,70 @@
-# split-html-attributes README
+# **Split HTML Attributes** (VSCode Extension)
 
-This is the README for your extension "split-html-attributes". After writing up a brief description, we recommend including the following sections.
+Tired of manually splitting your HTML attributes up onto multiple lines? 
+
+You can now do it **instantly** with this extension:
+
+![Demo](./images/DemoSelfClosing.gif)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Opening tags
 
-For example if there is an image subfolder under your extension project workspace:
+The extension works on opening tags:
 
-\!\[feature X\]\(images/feature-x.png\)
+![OpeningTags](./images/DemoOpeningTags.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Self-closing tags
 
-## Requirements
+As well as self-closing tags:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![SelfClosingTags](./images/DemoSelfClosing.gif)
+
+### Multiple selections
+
+And even works with multiple selections:
+
+![MultipleSelections](./images/DemoMultipleSelections.gif)
+
+## Usage
+
+Just select your opening (or self-closing) tag - from the opening angle bracket (`<`) up to the closing angle bracket (`>`) and either:
+* Open Command Pallette (`CMD/CTRL + Shift + P`) and choose `Split HTML Attributes`
+* Or use the keyboard shortcut (which defaults to `Ctrl + Alt + Shift + A`)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### `splitHTMLAttributes.tabSize`
 
-For example:
+Set the indentation size for your split lines.
 
-This extension contributes the following settings:
+* **Default:** 2
+* **Must be:** Number
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### `splitHTMLAttributes.useSpacesForTabs`
+
+Use spaces for indentation (instead of tabs)
+
+* **Default:** true
+* **Must be:** Boolean
+
+### Keybindings
+
+You can change the keyboard shorcut. This is the default:
+
+```json
+{
+  "command": "extension.splitHTMLAttributes",
+  "key": "ctrl+alt+shift+a"
+}
+```
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+No known issues yet.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release of **Split HTML Attributes**

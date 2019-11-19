@@ -1,8 +1,9 @@
 {
 	"name": "split-html-attributes",
 	"displayName": "Split HTML Attributes",
-	"description": "Split HTML Attributes onto New Lines",
-	"version": "0.0.1",
+	"description": "Split HTML Attributes onto new lines, instantly!",
+	"icon": "images/icon.png",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.40.0"
 	},
@@ -12,14 +13,38 @@
 	"activationEvents": [
 		"onCommand:extension.splitHTMLAttributes"
 	],
-	"main": "./extension.js",
+	"main": "./src/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "extension.splitHTMLAttributes",
 				"title": "Split HTML Attributes"
 			}
-		]
+		],
+		"keybindings": [
+			{
+				"command": "extension.splitHTMLAttributes",
+				"key": "ctrl+alt+shift+a",
+				"when": "editorTextFocus && !editorReadonly"
+			}
+		],
+		"configuration": {
+			"title": "Split HTML Attributes",
+			"properties": {
+				"splitHTMLAttributes.tabSize": {
+					"type": "number",
+					"default": 2,
+					"description": "Number of spaces for indentation.",
+					"scope": "resource"
+				},
+				"splitHTMLAttributes.useSpacesForTabs": {
+					"type": "boolean",
+					"default": true,
+					"description": "Use spaces for tabs.",
+					"scope": "resource"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"test": "node ./test/runTest.js"
@@ -34,5 +59,9 @@
 		"mocha": "^6.2.2",
 		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dannyconnell/vscode-split-html-attributes.git"
 	}
 }
