@@ -4,27 +4,38 @@ Tired of manually splitting your HTML attributes up onto multiple lines?
 
 You can now do it **instantly** with this extension:
 
-![Demo](./images/DemoSelfClosing.gif)
+![Demo](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/DemoSelfClosing.gif)
+
+## Contents
+* [Features](#features)
+  * [Opening tags](#opening-tags)
+  * [Self-closing tags](#self-closing-tags)
+  * [Multiple Selections](#multiple-selections)
+* [Usage](#usage)
+* [Extension Settings](#extension-settings)
+  * [Keybindings](#keybindings)
+* [Known Issues](#known-issues)
+* [Release Notes](#release-notes)
 
 ## Features
 
-### Opening tags
+### Opening Tags
 
 The extension works on opening tags:
 
-![OpeningTags](./images/DemoOpeningTags.gif)
+![OpeningTags](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/DemoOpeningTags.gif)
 
-### Self-closing tags
+### Self-Closing Tags
 
 As well as self-closing tags:
 
-![SelfClosingTags](./images/DemoSelfClosing.gif)
+![SelfClosingTags](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/DemoSelfClosing.gif)
 
-### Multiple selections
+### Multiple Selections
 
 And even works with multiple selections:
 
-![MultipleSelections](./images/DemoMultipleSelections.gif)
+![MultipleSelections](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/DemoMultipleSelections.gif)
 
 ## Usage
 
