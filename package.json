@@ -4,6 +4,7 @@
 	"description": "Split HTML Attributes onto new lines, instantly!",
 	"icon": "images/icon.png",
 	"version": "1.0.0",
+	"publisher": "dannyconnell",
 	"engines": {
 		"vscode": "^1.40.0"
 	},
