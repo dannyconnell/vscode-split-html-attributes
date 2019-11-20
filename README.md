@@ -79,3 +79,11 @@ No known issues yet.
 ### 1.0.0
 
 Initial release of **Split HTML Attributes**
+
+## Feature Suggestions
+
+A list of feature suggestions I've received, along with vote count.
+
+* ESLint integration (follow the ESLint indentation rules) `(1)`
+* Attribute ordering options `(1)`
+* Option for Closing bracket (`>` or `/>`) to be on a new line `(1)`
