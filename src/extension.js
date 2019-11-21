@@ -14,6 +14,8 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('extension.splitHTMLAttributes', function () {
+
+		// check we have an editor
 		let editor = vscode.window.activeTextEditor;
 		if (!editor) {
 				return;
@@ -24,6 +26,7 @@ function activate(context) {
 		let tabSize = config.get("tabSize")
 		let useSpacesForTabs = config.get("useSpacesForTabs")
 		let closingBracketOnNewLine = config.get("closingBracketOnNewLine")
+		let sortOrder = config.get("sortOrder")
 
 		// get document & selection
 		const document = editor.document
@@ -65,6 +68,14 @@ function activate(context) {
 				let initialWhitespaceRegex = /\s*/i
 				let initialWhitespace = lineText.match(initialWhitespaceRegex)[0]
 	
+				// get the opening tag
+				let openingTagRegex = /^[^\s]+/
+				let openingTag = textSelections[i].match(openingTagRegex)[0]
+
+				// remove opening tag and trim
+				textSelections[i] = textSelections[i].replace(openingTagRegex, '')
+				textSelections[i] = textSelections[i].trim()
+				
 				// get the ending bracket (if it's a "/>")
 				let endingBracket = ''
 				if (textSelections[i].endsWith('/>')) {
@@ -73,8 +84,8 @@ function activate(context) {
 				else {
 					endingBracket = '>'
 				}
-		
-				// remove ending bracket and trim (if it's a "/>")
+				
+				// remove ending bracket and trim
 				if (endingBracket == '/>') {
 					textSelections[i] = textSelections[i].replace('/>', '')
 				}
@@ -94,9 +105,54 @@ function activate(context) {
 				
 				// regex to select all spaces that aren't within quotes
 				let spacesRegex = /\s+(?=([^"]*"[^"]*")*[^"]*$)/g
+
+				// get attributes into an array
+				let attributesString = textSelections[i].replace(spacesRegex, '\n')
+				let attributesArray = attributesString.split('\n')
+
+				// sort the attributes array
+				let sortedAttributesArray = []
+				if (sortOrder.length) {
+
+					// loop through sortOrder array
+					sortOrder.forEach(search => {
+						// loop through attributesArray
+						let itemsToMove = []
+						attributesArray.forEach((item, index) => {
+							if (item.match(search)) {
+								itemsToMove.push(index)
+								// attributesArray.splice(index, 1)
+							}
+						})
+						// move matched items from attributesArray to sortedAttributesArray (and sort them)
+						let tempMatchedItems = []
+						itemsToMove.forEach(indexItem => {
+							tempMatchedItems.push(attributesArray[indexItem])
+						})
+						tempMatchedItems.sort()
+						sortedAttributesArray.push(...tempMatchedItems)
+
+						// remove matched items from attributesArray
+						for (var i = itemsToMove.length - 1; i >= 0; --i) {
+							attributesArray.splice(itemsToMove[i], 1)
+						}
+					})
+
+					// sort remaining attributes and add to sortedAttributesArray
+					attributesArray.sort()
+					sortedAttributesArray.push(...attributesArray)
+				}
+				else {
+					sortedAttributesArray = attributesArray
+				}
 				
-				// replace spaces with newlines, intial whitespace plus extra spaces / tabs for indentation		
-				textSplit[i] = textSelections[i].replace(spacesRegex, '\n' + initialWhitespace + indentationString)
+				// add the opening tag
+				textSplit[i] = openingTag
+
+				// add the sorted attributes to the textSplit string
+				sortedAttributesArray.forEach(item => {
+					textSplit[i] += '\n' + initialWhitespace + indentationString + item
+				})
 	
 				// configure ending bracket (new line or not new line)
 				if (closingBracketOnNewLine) {

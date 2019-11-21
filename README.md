@@ -50,11 +50,12 @@ Just select your opening (or self-closing) tag - from the opening angle bracket 
 
 ### Settings
 
-| Name | Description | Default | Type |
+| Setting | Default | Type |
 | - | - | - | - |
-| tabSize<br><small>`splitHTMLAttributes.tabSize`</small> | <small>Set the indentation size for your split lines.</small> | `2` | Number
-| useSpacesForTabs<br><small>`splitHTMLAttributes.useSpacesForTabs`</small> | <small>Use spaces for indentation (instead of tabs).</small> | `true` | Boolean
-| closingBracketOnNewLine<br><small>`splitHTMLAttributes.closingBracketOnNewLine`</sup></> | <small>Place closing bracket (`>` or `/>`) on a new line.</small> | `false` | Boolean
+| **tabSize**<br><small>`splitHTMLAttributes.tabSize`</small><br><small>Set the indentation size for your split lines.</small> | `2` | Number
+| **useSpacesForTabs**<br><small>`splitHTMLAttributes.useSpacesForTabs`</small><br><small>Use spaces for indentation (instead of tabs).</small> | `true` | Boolean
+| **closingBracketOnNewLine**<br><small>`splitHTMLAttributes.closingBracketOnNewLine`</small><br><small>Place closing bracket (`>` or `/>`) on a new line.</small> | `false` | Boolean
+| **sortOrder**<br><small>`splitHTMLAttributes.sortOrder`</small><br><small>Preferred sort order of attributes.<br>Can be an array of strings or regex.<br>A typical setting for Vue.js development might be:<br>`["^v-if", "^v-else", "^v-show", "^v-model", "^v-for", "^:key", "^key", "^v-", "^:", "^@click", "^@", "^id", "^class", "^.*=\""]`<br>Which would sort your attributes like so:<br>![Demo](./images/AttributeSorting.png)</small> | `[]` | Boolean
 
 ### Keybindings
 
