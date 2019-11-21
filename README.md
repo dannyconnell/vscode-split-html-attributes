@@ -52,10 +52,10 @@ Just select your opening (or self-closing) tag - from the opening angle bracket 
 
 | Setting | Default | Type |
 | - | - | - | - |
-| **tabSize**<br><small>`splitHTMLAttributes.tabSize`</small><br><small>Set the indentation size for your split lines.</small> | `2` | Number
-| **useSpacesForTabs**<br><small>`splitHTMLAttributes.useSpacesForTabs`</small><br><small>Use spaces for indentation (instead of tabs).</small> | `true` | Boolean
-| **closingBracketOnNewLine**<br><small>`splitHTMLAttributes.closingBracketOnNewLine`</small><br><small>Place closing bracket (`>` or `/>`) on a new line.</small> | `false` | Boolean
-| **sortOrder**<br><small>`splitHTMLAttributes.sortOrder`</small><br><small>Preferred sort order of attributes.<br>Can be an array of strings or regex.<br>A typical setting for Vue.js development might be:<br>`["^v-if", "^v-else", "^v-show", "^v-model", "^v-for", "^:key", "^key", "^v-", "^:", "^@click", "^@", "^id", "^class", "^.*=\""]`<br>Which would sort your attributes like so:<br>![Demo](./images/AttributeSorting.png)</small> | `[]` | Boolean
+| **tabSize**<br><small>`splitHTMLAttributes.tabSize`</small><br><br>Set the indentation size for your split lines. | `2` | Number
+| **useSpacesForTabs**<br><small>`splitHTMLAttributes.useSpacesForTabs`</small><br><br>Use spaces for indentation (instead of tabs). | `true` | Boolean
+| **closingBracketOnNewLine**<br><small>`splitHTMLAttributes.closingBracketOnNewLine`</small><br><br>Place closing bracket (`>` or `/>`) on a new line.| `false` | Boolean
+| **sortOrder**<br><small>`splitHTMLAttributes.sortOrder`</small><br><br>Preferred sort order of attributes.<br>Can be an array of strings or regex.<br>A typical setting for Vue.js development might be:<br>`["^v-if", "^v-else", "^v-show", "^v-model", "^v-for", "^:key", "^key", "^v-", "^:", "^@click", "^@", "^id", "^class", "^.*=\""]`<br>Which would sort your attributes like so:<br>![Demo](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/AttributeSorting.png) | `[]` | Array
 
 ### Keybindings
 
@@ -83,5 +83,5 @@ A list of feature suggestions I've received, along with vote count.
 | Suggestion | Votes | Added?  |
 | - | - | - |
 | ESLint integration (follow the ESLint indentation rules) | `1` | |
-| Attribute ordering options | `1` | |
+| ~~Attribute ordering options~~ | `1` | Yes |
 | ~~Option for closing bracket (`>` or `/>`) to be on a new line~~ | `2` | Yes |
