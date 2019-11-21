@@ -18,9 +18,15 @@ function activate(context) {
 		if (!editor) {
 				return;
 		}
+
+		// get config
+		let config = vscode.workspace.getConfiguration('splitHTMLAttributes', editor.document.uri)
+		let tabSize = config.get("tabSize")
+		let useSpacesForTabs = config.get("useSpacesForTabs")
+		let closingBracketOnNewLine = config.get("closingBracketOnNewLine")
+
 		// get document & selection
 		const document = editor.document
-		// const selection = editor.selection
 		const selections = editor.selections
 
 		// check if each selection starts with < and ends with >
@@ -62,19 +68,20 @@ function activate(context) {
 				// get the ending bracket (if it's a "/>")
 				let endingBracket = ''
 				if (textSelections[i].endsWith('/>')) {
-					endingBracket = ' />'
+					endingBracket = '/>'
+				}
+				else {
+					endingBracket = '>'
 				}
 		
 				// remove ending bracket and trim (if it's a "/>")
-				if (endingBracket) {
+				if (endingBracket == '/>') {
 					textSelections[i] = textSelections[i].replace('/>', '')
-					textSelections[i] = textSelections[i].trim()
 				}
-		
-				// get tab size settings
-				let config = vscode.workspace.getConfiguration('splitHTMLAttributes', editor.document.uri)
-				let tabSize = config.get("tabSize")
-				let useSpacesForTabs = config.get("useSpacesForTabs")
+				else {
+					textSelections[i] = textSelections[i].substring(0, textSelections[i].length - 1)
+				}
+				textSelections[i] = textSelections[i].trim()
 				
 				// create the indentation string
 				let indentationString
@@ -91,9 +98,16 @@ function activate(context) {
 				// replace spaces with newlines, intial whitespace plus extra spaces / tabs for indentation		
 				textSplit[i] = textSelections[i].replace(spacesRegex, '\n' + initialWhitespace + indentationString)
 	
-				// add back in the ending bracket if needed
+				// configure ending bracket (new line or not new line)
+				if (closingBracketOnNewLine) {
+					endingBracket = '\n' + initialWhitespace + endingBracket
+				}
+				else if (endingBracket == '/>') {
+					endingBracket = ' ' + endingBracket
+				}
+
+				// add the ending bracket
 				textSplit[i] = textSplit[i] + endingBracket
-					
 			}
 
 			// do the replacement in the editor

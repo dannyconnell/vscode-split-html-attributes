@@ -45,19 +45,13 @@ Just select your opening (or self-closing) tag - from the opening angle bracket 
 
 ## Extension Settings
 
-### `splitHTMLAttributes.tabSize`
+### Settings
 
-Set the indentation size for your split lines.
-
-* **Default:** 2
-* **Must be:** Number
-
-### `splitHTMLAttributes.useSpacesForTabs`
-
-Use spaces for indentation (instead of tabs)
-
-* **Default:** true
-* **Must be:** Boolean
+| Name | Description | Default | Type |
+| - | - | - | - |
+| tabSize<br><sub><sup>`splitHTMLAttributes.tabSize`</sup></sub> | <small>Set the indentation size for your split lines.</small> | `2` | Number
+| useSpacesForTabs<br><sub><sup>`splitHTMLAttributes.useSpacesForTabs`</sup></sub> | <small>Use spaces for indentation (instead of tabs).</small> | `true` | Boolean
+| closingBracketOnNewLine<br><sub><sup>`splitHTMLAttributes.closingBracketOnNewLine`</sup></sub> | <small>Place closing bracket (`>` or `/>`) on a new line.</small> | `false` | Boolean
 
 ### Keybindings
 
@@ -74,16 +68,16 @@ You can change the keyboard shorcut. This is the default:
 
 No known issues yet.
 
-## Release Notes
+## Change Log
 
-### 1.0.0
-
-Initial release of **Split HTML Attributes**
+[View the Chage Log here](https://github.com/dannyconnell/vscode-split-html-attributes/blob/master/CHANGELOG.md)
 
 ## Feature Suggestions
 
 A list of feature suggestions I've received, along with vote count.
 
-* ESLint integration (follow the ESLint indentation rules) `(1)`
-* Attribute ordering options `(1)`
-* Option for Closing bracket (`>` or `/>`) to be on a new line `(1)`
+| Suggestion | Votes | Added?  |
+| - | - | - |
+| Option for closing bracket (`>` or `/>`) to be on a new line | `2` | |
+| ESLint integration (follow the ESLint indentation rules) | `1` | |
+| Attribute ordering options | `1` | |

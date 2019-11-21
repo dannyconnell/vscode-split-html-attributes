@@ -2,8 +2,10 @@
 
 All notable changes to the "split-html-attributes" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### [1.0.1] - Nov 21 2019
 
-## [Unreleased]
+- Added option to place closing bracket (> or />) on new line
 
-- Initial release
+### [1.0.0] - Nov 19 2019
+
+- Initial release of **Split HTML Attributes**

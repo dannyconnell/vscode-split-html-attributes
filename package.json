@@ -3,7 +3,7 @@
 	"displayName": "Split HTML Attributes",
 	"description": "Split HTML Attributes onto new lines, instantly!",
 	"icon": "images/icon.png",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "dannyconnell",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -42,6 +42,12 @@
 					"type": "boolean",
 					"default": true,
 					"description": "Use spaces for tabs.",
+					"scope": "resource"
+				},
+				"splitHTMLAttributes.closingBracketOnNewLine": {
+					"type": "boolean",
+					"default": false,
+					"description": "Place closing bracket (> or />) on a new line.",
 					"scope": "resource"
 				}
 			}
