@@ -1,4 +1,4 @@
-# **Split HTML Attributes** (VSCode Extension)
+# **Split HTML Attributes** (VSCode Extension) <!-- omit in toc -->
 
 Tired of manually splitting your HTML attributes up onto multiple lines? 
 
@@ -6,16 +6,19 @@ You can now do it **instantly** with this extension:
 
 ![Demo](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/DemoSelfClosing.gif)
 
-## Contents
-* [Features](#features)
-  * [Opening tags](#opening-tags)
-  * [Self-closing tags](#self-closing-tags)
-  * [Multiple Selections](#multiple-selections)
-* [Usage](#usage)
-* [Extension Settings](#extension-settings)
-  * [Keybindings](#keybindings)
-* [Known Issues](#known-issues)
-* [Release Notes](#release-notes)
+## Contents <!-- omit in toc -->
+
+- [Features](#features)
+  - [Opening Tags](#opening-tags)
+  - [Self-Closing Tags](#self-closing-tags)
+  - [Multiple Selections](#multiple-selections)
+- [Usage](#usage)
+- [Extension Settings](#extension-settings)
+  - [Settings](#settings)
+  - [Keybindings](#keybindings)
+- [Known Issues](#known-issues)
+- [Change Log](#change-log)
+- [Feature Suggestions](#feature-suggestions)
 
 ## Features
 
@@ -70,7 +73,7 @@ No known issues yet.
 
 ## Change Log
 
-[View the Chage Log here](https://github.com/dannyconnell/vscode-split-html-attributes/blob/master/CHANGELOG.md)
+[View the Change Log here](https://github.com/dannyconnell/vscode-split-html-attributes/blob/master/CHANGELOG.md)
 
 ## Feature Suggestions
 
