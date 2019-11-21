@@ -51,7 +51,7 @@ Just select your opening (or self-closing) tag - from the opening angle bracket 
 ### Settings
 
 | Setting | Default | Type |
-| - | - | - | - |
+| - | - | - |
 | **tabSize**<br><small>`splitHTMLAttributes.tabSize`</small><br><br>Set the indentation size for your split lines. | `2` | Number
 | **useSpacesForTabs**<br><small>`splitHTMLAttributes.useSpacesForTabs`</small><br><br>Use spaces for indentation (instead of tabs). | `true` | Boolean
 | **closingBracketOnNewLine**<br><small>`splitHTMLAttributes.closingBracketOnNewLine`</small><br><br>Place closing bracket (`>` or `/>`) on a new line.| `false` | Boolean
