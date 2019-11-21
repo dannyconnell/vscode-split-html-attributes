@@ -2,7 +2,7 @@
 
 All notable changes to the "split-html-attributes" extension will be documented in this file.
 
-### [1.0.2, 1.0.3] - Nov 21 2019
+### [1.0.4] - Nov 21 2019
 
 - Added `sortOrder` option to specify a preferred sort order for attributes using an array of regex's
 

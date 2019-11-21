@@ -3,7 +3,7 @@
 	"displayName": "Split HTML Attributes",
 	"description": "Split HTML Attributes onto new lines, instantly!",
 	"icon": "images/icon.png",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publisher": "dannyconnell",
 	"engines": {
 		"vscode": "^1.40.0"
