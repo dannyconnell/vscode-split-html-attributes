@@ -78,6 +78,6 @@ A list of feature suggestions I've received, along with vote count.
 
 | Suggestion | Votes | Added?  |
 | - | - | - |
-| Option for closing bracket (`>` or `/>`) to be on a new line | `2` | |
 | ESLint integration (follow the ESLint indentation rules) | `1` | |
 | Attribute ordering options | `1` | |
+| ~~Option for closing bracket (`>` or `/>`) to be on a new line~~ | `2` | Yes |
