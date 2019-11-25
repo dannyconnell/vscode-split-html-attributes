@@ -3,13 +3,22 @@
 	"displayName": "Split HTML Attributes",
 	"description": "Split HTML Attributes onto new lines, instantly!",
 	"icon": "images/icon.png",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"publisher": "dannyconnell",
 	"engines": {
 		"vscode": "^1.40.0"
 	},
 	"categories": [
+		"Formatters",
+		"Programming Languages",
 		"Other"
+	],
+	"keywords": [
+		"vue",
+		"react",
+		"angular",
+		"formatter",
+		"format"
 	],
 	"activationEvents": [
 		"onCommand:extension.splitHTMLAttributes"

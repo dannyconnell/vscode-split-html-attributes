@@ -1,6 +1,6 @@
 # **Split HTML Attributes** (VSCode Extension) <!-- omit in toc -->
 
-Tired of manually splitting your HTML attributes up onto multiple lines? 
+Tired of manually splitting your HTML attributes (or ![Vue.js]([./images/](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/)Vue.png "Vue.js") / ![React]([./images/](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/)React.png "React") / ![Angular]([./images/](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/)Angular.png "Angular") directives & props) up onto multiple lines? 
 
 You can now do it **instantly** with this extension:
 
@@ -12,6 +12,8 @@ You can now do it **instantly** with this extension:
   - [Opening Tags](#opening-tags)
   - [Self-Closing Tags](#self-closing-tags)
   - [Multiple Selections](#multiple-selections)
+  - [Closing Bracket on New Line](#closing-bracket-on-new-line)
+  - [Ordering](#ordering)
 - [Usage](#usage)
 - [Extension Settings](#extension-settings)
   - [Settings](#settings)
@@ -40,6 +42,16 @@ And even works with multiple selections:
 
 ![MultipleSelections](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/DemoMultipleSelections.gif)
 
+### Closing Bracket on New Line
+
+You can choose whether to place your closing bracket (`>` or `/>`) on a new line or not.
+
+### Ordering
+
+You can set the sort order for your attributes. For example, as a **Vue.js** developer, you can make sure your important Vue directives & handlers come first:
+
+![AttributeSorting](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/AttributeSorting.png)
+
 ## Usage
 
 Just select your opening (or self-closing) tag - from the opening angle bracket (`<`) up to the closing angle bracket (`>`) and either:
@@ -55,7 +67,7 @@ Just select your opening (or self-closing) tag - from the opening angle bracket 
 | **tabSize**<br><small>`splitHTMLAttributes.tabSize`</small><br><br>Set the indentation size for your split lines. | `2` | Number
 | **useSpacesForTabs**<br><small>`splitHTMLAttributes.useSpacesForTabs`</small><br><br>Use spaces for indentation (instead of tabs). | `true` | Boolean
 | **closingBracketOnNewLine**<br><small>`splitHTMLAttributes.closingBracketOnNewLine`</small><br><br>Place closing bracket (`>` or `/>`) on a new line.| `false` | Boolean
-| **sortOrder**<br><small>`splitHTMLAttributes.sortOrder`</small><br><br>Preferred sort order of attributes.<br>Can be an array of strings or regex.<br>A typical setting for Vue.js development might be:<br>`["^v-if", "^v-else", "^v-show", "^v-model", "^v-for", "^:key", "^key", "^v-", "^:", "^@click", "^@", "^id", "^class", "^.*=\""]`<br>Which would sort your attributes like so:<br>![Demo](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/AttributeSorting.png) | `[]` | Array
+| **sortOrder**<br><small>`splitHTMLAttributes.sortOrder`</small><br><br>Preferred sort order of attributes.<br>Can be an array of strings or regex.<br>A typical setting for Vue.js development might be:<br>`["^v-if", "^v-else", "^v-show", "^v-model", "^v-for", "^:key", "^key", "^v-", "^:", "^@click", "^@", "^id", "^class", "^.*=\""]`<br>Which would sort your attributes like so:<br>![AttributeSorting](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/AttributeSorting.png) | `[]` | Array
 
 ### Keybindings
 
