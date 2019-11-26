@@ -2,6 +2,10 @@
 
 All notable changes to the "split-html-attributes" extension will be documented in this file.
 
+### [1.0.6] - Nov 26 2019
+
+- Updated title, description and readme
+
 ### [1.0.5] - Nov 25 2019
 
 - New icon, readme updates, added keywords & categories
