@@ -1,4 +1,4 @@
-# **Split HTML Attributes** (VSCode Extension) <!-- omit in toc -->
+# **Split HTML Attributes (Vue, React, Angular)** - VSCode Extension <!-- omit in toc -->
 
 Tired of manually splitting your HTML attributes (or ![Vue.js](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/Vue.png "Vue.js") / ![React](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/React.png "React") / ![Angular](https://raw.githubusercontent.com/dannyconnell/vscode-split-html-attributes/master/images/Angular.png "Angular") directives & props) up onto multiple lines? 
 
