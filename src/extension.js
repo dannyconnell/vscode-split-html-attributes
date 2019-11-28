@@ -55,6 +55,9 @@ function activate(context) {
 
 			for (let i = 0; i < selections.length; i++) {
 
+				// count the number of lines initally selected
+				let lineCount = textSelections[i].split('\n').length
+
 				// get full line text from current line
 				const currentLinePosition = selections[i].active.line
 				const currentLine = editor.document.lineAt(currentLinePosition);
@@ -149,17 +152,40 @@ function activate(context) {
 				// add the opening tag
 				textSplit[i] = openingTag
 
+				// set the join character based on number of lines initially selected
+				// (newLine if one line, space if more)
+				let joinCharacter = lineCount > 1 ? ' ' : '\n'
+
+				// if there are no attributes, set joinCharacter to ''
+				if (sortedAttributesArray.length == 1 && sortedAttributesArray[0] == '') {
+					joinCharacter = ''
+				}
+
 				// add the sorted attributes to the textSplit string
-				sortedAttributesArray.forEach(item => {
-					textSplit[i] += '\n' + initialWhitespace + indentationString + item
-				})
+				if (lineCount > 1) {
+					sortedAttributesArray.forEach(item => {
+						textSplit[i] += joinCharacter + item
+					})
+				}
+				else {
+					sortedAttributesArray.forEach(item => {
+						textSplit[i] += joinCharacter + initialWhitespace + indentationString + item
+					})
+				}
 	
 				// configure ending bracket (new line or not new line)
-				if (closingBracketOnNewLine) {
-					endingBracket = '\n' + initialWhitespace + endingBracket
+				if (lineCount > 1) {
+					if (endingBracket == '/>') {
+						endingBracket = ' ' + endingBracket
+					}
 				}
-				else if (endingBracket == '/>') {
-					endingBracket = ' ' + endingBracket
+				else {
+					if (closingBracketOnNewLine) {
+						endingBracket = '\n' + initialWhitespace + endingBracket
+					}
+					else if (endingBracket == '/>') {
+						endingBracket = ' ' + endingBracket
+					}
 				}
 
 				// add the ending bracket
