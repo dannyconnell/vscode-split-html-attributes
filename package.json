@@ -3,7 +3,7 @@
 	"displayName": "Split HTML Attributes (Vue, React, Angular)",
 	"description": "Split your Vue, React & Angular directives & props (and HTML attributes) onto new lines, instantly!",
 	"icon": "images/icon.png",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"publisher": "dannyconnell",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -16,7 +16,33 @@
 		"react",
 		"angular",
 		"formatter",
-		"format"
+		"format",
+		"vue.js",
+		"vuejs",
+		"reactjs",
+		"angularjs",
+		"new lines",
+		"break",
+		"break directives",
+		"break vue directives",
+		"break react directives",
+		"break angular directives",
+		"break up",
+		"break up directives",
+		"break up vue directives",
+		"break up react directives",
+		"break up angular directives",
+		"split",
+		"split props",
+		"split directives",
+		"split vue directives",
+		"split react directives",
+		"split angular directives",
+		"split onto new lines",
+		"split attributes onto new lines",
+		"split attributes new lines",
+		"danny connell",
+		"make apps with danny"
 	],
 	"activationEvents": [
 		"onCommand:extension.splitHTMLAttributes"

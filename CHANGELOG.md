@@ -2,6 +2,10 @@
 
 All notable changes to the **Split HTML Attributes** extension will be documented in this file.
 
+### **1.0.8** - Nov 29 2019
+
+- Metadata and readme updates
+
 ### **1.0.7** - Nov 28 2019
 
 - Added `Unsplit HTML attributes` functionality - triggered when selected opening (or self-closing) tag is already split onto multiple lines
