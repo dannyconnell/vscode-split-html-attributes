@@ -9,7 +9,7 @@ Tired of manually splitting your HTML attributes (or ![Vue.js](./images/Vue.png 
 You can now do it **instantly** with this extension:
 
 ![Demo](./images/DemoSelfClosing.gif)
-<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
+<br><small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 Created by Danny, from [Make Apps with Danny (YouTube Channel)](https://dannys.link/youtube "Make Apps with Danny (YouTube Channel)"):
 
