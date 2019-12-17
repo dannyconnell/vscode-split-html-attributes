@@ -9,6 +9,7 @@ Tired of manually splitting your HTML attributes (or ![Vue.js](./images/Vue.png 
 You can now do it **instantly** with this extension:
 
 ![Demo](./images/DemoSelfClosing.gif)
+<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 Created by Danny, from [Make Apps with Danny (YouTube Channel)](https://dannys.link/youtube "Make Apps with Danny (YouTube Channel)"):
 
@@ -31,7 +32,7 @@ Created by Danny, from [Make Apps with Danny (YouTube Channel)](https://dannys.l
 - [Don't Forget...](#dont-forget)
 - [Known Issues](#known-issues)
 - [Change Log](#change-log)
-- [Feature Suggestions](#feature-suggestions)
+- [My Other VSCode Extensions](#my-other-vscode-extensions)
 
 ## Support
 
@@ -46,36 +47,42 @@ Find this extension useful? Please support it by leaving a review:
 The extension works on opening tags:
 
 ![OpeningTags](./images/DemoOpeningTags.gif)
+<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 ### Self-Closing Tags
 
 As well as self-closing tags:
 
 ![SelfClosingTags](./images/DemoSelfClosing.gif)
+<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 ### Multiple Selections
 
 And even works with multiple selections:
 
 ![MultipleSelections](./images/DemoMultipleSelections.gif)
+<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 ### Closing Bracket on New Line
 
 You can choose whether to place your closing bracket (`>` or `/>`) on a new line or not:
 
 ![DemoClosingBracket](./images/DemoClosingBracket.png)
+<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 ### Ordering
 
 You can set the sort order for your attributes. For example, as a **Vue.js** developer, you can make sure your important Vue directives & handlers come first:
 
 ![AttributeSorting](./images/DemoAttributeSorting.png)
+<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 ### Unsplit Attributes
 
 If you trigger the extension on an opening (or self-closing) tag that's already split, it will unsplit it back onto a single line:
 
 ![Unsplit](./images/DemoUnsplit.gif)
+<small>*Theme: [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")*</small>
 
 ## Usage
 
@@ -119,13 +126,6 @@ No known issues yet.
 
 [View the Change Log here](https://github.com/dannyconnell/vscode-split-html-attributes/blob/master/CHANGELOG.md)
 
-## Feature Suggestions
+## My Other VSCode Extensions
 
-A list of feature suggestions I've received, along with vote count.
-
-| Suggestion | Votes | Added?  |
-| - | - | - |
-| ESLint integration (follow the ESLint indentation rules) | `1` | |
-| ~~Unsplit HTML attributes~~ | `1` | Yes |
-| ~~Attribute ordering options~~ | `1` | Yes |
-| ~~Option for closing bracket (`>` or `/>`) to be on a new line~~ | `2` | Yes |
+- [Make Apps Theme](https://marketplace.visualstudio.com/items?itemName=dannyconnell.make-apps-theme "Make Apps Theme")

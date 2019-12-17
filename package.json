@@ -3,7 +3,7 @@
 	"displayName": "Split HTML Attributes (Vue, React, Angular)",
 	"description": "Split your Vue, React & Angular directives & props (and HTML attributes) onto new lines, instantly!",
 	"icon": "images/icon.png",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"publisher": "dannyconnell",
 	"engines": {
 		"vscode": "^1.40.0"
