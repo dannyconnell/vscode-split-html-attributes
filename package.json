@@ -88,6 +88,12 @@
 					"default": [],
 					"description": "Your preferred order for attributes e.g. [\"v-if\", \"v-else\", \"v-\", \"@click\", \"@focus\", \"@\"]",
 					"scope": "resource"
+				},
+				"splitHTMLAttributes.splitAfterFirstAttribute": {
+					"type": "boolean",
+					"default": false,
+					"description": "Split arguments after first attribute, left-aligning with it.",
+					"scope": "resource"
 				}
 			}
 		}

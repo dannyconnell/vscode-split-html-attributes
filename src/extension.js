@@ -27,6 +27,7 @@ function activate(context) {
 		let useSpacesForTabs = config.get("useSpacesForTabs")
 		let closingBracketOnNewLine = config.get("closingBracketOnNewLine")
 		let sortOrder = config.get("sortOrder")
+		let splitAfterFirstAttribute = config.get("splitAfterFirstAttribute")
 
 		// get document & selection
 		const document = editor.document
@@ -168,6 +169,13 @@ function activate(context) {
 					})
 				}
 				else {
+					if (splitAfterFirstAttribute && sortedAttributesArray.length > 0) {
+						let item = sortedAttributesArray[0]
+						textSplit[i] += ' ' + item
+						sortedAttributesArray.shift()
+						// reuse indentationString for additionaly needed whitespace
+						indentationString += ' '.repeat(openingTag.length - joinCharacter.length)
+					}
 					sortedAttributesArray.forEach(item => {
 						textSplit[i] += joinCharacter + initialWhitespace + indentationString + item
 					})
