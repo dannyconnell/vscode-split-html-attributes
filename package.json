@@ -65,16 +65,21 @@
 		"configuration": {
 			"title": "Split HTML Attributes",
 			"properties": {
-				"splitHTMLAttributes.tabSize": {
-					"type": "number",
-					"default": 2,
-					"description": "Number of spaces for indentation.",
-					"scope": "resource"
-				},
-				"splitHTMLAttributes.useSpacesForTabs": {
-					"type": "boolean",
-					"default": true,
-					"description": "Use spaces for tabs.",
+				"splitHTMLAttributes.indentType": {
+					"type": "string",
+					"default": "Auto",
+					"enum": [
+						"Auto",
+						"Tab",
+						"Spaces 0",
+						"Spaces 1",
+						"Spaces 2",
+						"Spaces 3",
+						"Spaces 4",
+						"Spaces 5",
+						"Spaces 6"
+					],
+					"description": "What indents to use.",
 					"scope": "resource"
 				},
 				"splitHTMLAttributes.closingBracketOnNewLine": {

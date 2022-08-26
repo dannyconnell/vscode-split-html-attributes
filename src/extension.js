@@ -23,10 +23,21 @@ function activate(context) {
 
 		// get config
 		let config = vscode.workspace.getConfiguration('splitHTMLAttributes', editor.document.uri)
-		let tabSize = config.get("tabSize")
-		let useSpacesForTabs = config.get("useSpacesForTabs")
 		let closingBracketOnNewLine = config.get("closingBracketOnNewLine")
 		let sortOrder = config.get("sortOrder")
+		
+		// get indent options
+		let tabSize, useSpacesForTabs, indentType = config.get("indentType");
+		if (indentType.toLowerCase() === "auto") {
+			tabSize = editor.options.tabSize
+			useSpacesForTabs = editor.options.insertSpaces
+		} else if (indentType.toLowerCase() === "tab") {
+			tabSize = 1;
+			useSpacesForTabs = false;
+		} else {
+			tabSize = parseInt(indentType);
+			useSpacesForTabs = true;
+		}
 
 		// get document & selection
 		const document = editor.document
